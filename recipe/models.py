@@ -5,3 +5,6 @@ class Category(models.Model):
 
     def __iter__(self):
         return iter(self.recipes.all())
+
+    def __str__(self):
+        return self.name
