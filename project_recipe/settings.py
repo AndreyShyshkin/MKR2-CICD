@@ -18,7 +18,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Initialize environment variables
 env = environ.Env(
-    DEBUG=(bool, False)
+    DEBUG=(bool, False),
+    SECRET_KEY=(str, 'django-insecure-dummy-key-for-ci-and-testing-purposes-only'),
+    ALLOWED_HOSTS=(list, ['localhost', '127.0.0.1'])
 )
 
 # Read .env file if it exists
